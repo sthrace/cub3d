@@ -33,9 +33,10 @@ void			ft_mlx_init(t_cub *cub)
 		exit_cub(cub, 40);
 	mlx_get_screen_size(cub->mlx, &x, &y);
 	ft_set_scale(cub, x, y);
-	if (!(cub->win = mlx_new_window(cub->mlx, \
-		cub->file.w, cub->file.h, "Sthrace cub3d")))
-		exit_cub(cub, 40);
+	if (cub->file.save == 0)
+		if (!(cub->win = mlx_new_window(cub->mlx, \
+			cub->file.w, cub->file.h, "Sthrace cub3d")))
+			exit_cub(cub, 40);
 	ft_init_textures(cub);
 	if (!(cub->rcs.zbuffer = (double *)malloc(sizeof(double) * cub->file.w)))
 		exit_cub(cub, 33);

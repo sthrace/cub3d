@@ -1,6 +1,6 @@
 
 
-R 800 600
+R 1980 1080
 NO ./textures/bluestone.xpm
 SO ./textures/greystone.xpm
 WE ./textures/wood.xpm

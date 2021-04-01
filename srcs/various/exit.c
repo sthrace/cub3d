@@ -93,11 +93,16 @@ void			exit_cub(t_cub *cub, int err)
 	else if (err > 99)
 	{
 		if (err == 100)
+		{
 			ft_putendl_fd("Good bye", 1);
+			mlx_destroy_image(cub->mlx, cub->img.image);
+			mlx_destroy_window(cub->mlx, cub->win);
+		}
 		else
+		{
 			ft_putendl_fd("cub3d.bmp created in root directory", 1);
-		mlx_destroy_image(cub->mlx, cub->img.image);
-		mlx_destroy_window(cub->mlx, cub->win);
+			mlx_destroy_image(cub->mlx, cub->img.image);
+		}
 		exit(0);
 	}
 }

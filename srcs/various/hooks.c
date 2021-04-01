@@ -20,6 +20,7 @@ int			key_release(int keycode, t_cub *cub)
 		cub->mv.rotleft = 0;
 	if (keycode == RIGHT)
 		cub->mv.rotright = 0;
+	ft_movement(cub);
 	return (0);
 }
 
@@ -39,5 +40,6 @@ int			key_press(int keycode, t_cub *cub)
 		cub->mv.rotright = 1;
 	if (keycode == ESC)
 		exit_cub(cub, 100);
+	ft_movement(cub);
 	return (0);
 }

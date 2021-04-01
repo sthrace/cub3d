@@ -18,9 +18,7 @@ SRCS = srcs/cub3d.c \
 		srcs/various/movement.c \
 		srcs/various/save.c \
 		srcs/various/sprites.c \
-		srcs/various/texture.c \
-		GNL/get_next_line.c \
-		GNL/get_next_line_utils.c
+		srcs/various/texture.c 
 	   
 
 OBJS = $(SRCS:.c=.o)
