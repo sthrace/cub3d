@@ -28,6 +28,7 @@ CC = clang
 RM = rm -rf
 
 CFLAGS = -g -Wall -Werror -Wextra
+# CFLAGS = -fsanitize=address -Wall -Werror -Wextra
 
 MACFLAGS = -framework OpenGL -framework Appkit
 

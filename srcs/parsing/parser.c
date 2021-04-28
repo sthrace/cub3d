@@ -75,12 +75,17 @@ static void		ft_readfile(int fd, char *line, t_cub *cub)
 			free(line);
 			continue;
 		}
+		else if (line[0] == 32 && flag <= 8)
+			exit_cub(cub, 10);
 		else if (flag >= 8 && ((ft_strchr(line, '1')) || ft_strchr(line, ' ')))
 			ft_tempmap(cub, &line, &flag);
 		else
 			exit_cub(cub, 10);
 	}
-	ft_tempmap(cub, &line, &flag);
+	if (ft_strchr(line, '1') || line[0] == 10 || line[0] == 0)
+		ft_tempmap(cub, &line, &flag);
+	else
+		exit_cub(cub, 10);
 	ft_makemap(cub);
 	ft_player_position(cub, 0, 0);
 }

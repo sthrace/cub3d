@@ -17,6 +17,7 @@ static void		ft_init(t_cub *cub)
 	cub->file.ceiling = NULL;
 	cub->file.map.tmp = NULL;
 	cub->file.map.map = NULL;
+	
 	cub->file.save = 0;
 	cub->file.w = 0;
 	cub->file.rgb_floor = 0;
